@@ -20,7 +20,7 @@ const Observer = ({
 
     const getPages = () => {
         const newPage = createPage(seed, pages, mistakesNumber, language);
-        console.log(mistakesNumber);
+
         setPages([...pages, newPage]);
     };
 

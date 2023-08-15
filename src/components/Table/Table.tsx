@@ -20,16 +20,12 @@ const Table = ({ pages, setPages }: Props) => {
     const { mistakesNumber, seed, language } = useSettingsContext();
 
     useEffect(() => {
-        console.log('EFFECR', mistakesNumber);
-
         const newPage = createPage(seed, [], mistakesNumber, language);
-        console.log(newPage);
 
         setPages((prevPages) => [newPage]);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [mistakesNumber, seed, language]);
 
-    console.log(pages);
     return (
         <TableContainer component={Paper}>
             <MuiTable sx={{ minWidth: 650 }} aria-label='simple table'>

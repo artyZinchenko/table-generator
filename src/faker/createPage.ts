@@ -9,7 +9,6 @@ export function createPage(
     mistakesNumber: number = 0,
     language: LocaleDefinition
 ) {
-    console.log(seed, mistakesNumber);
     const faker = new Faker({
         locale: [language],
     });
