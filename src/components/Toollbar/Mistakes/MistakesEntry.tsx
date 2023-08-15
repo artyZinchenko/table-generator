@@ -12,7 +12,7 @@ const Input = styled(MuiInput)`
 
 const MistakesEntry = () => {
     const [sliderValue, setSliderValue] = useState(0);
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState('0');
     const { mistakesNumber, setMistakesNumber } = useSettingsContext();
 
     const handleSliderChange = (
@@ -39,6 +39,7 @@ const MistakesEntry = () => {
         if (!event.target.value || isNaN(Number(event.target.value))) {
             setInputValue('0');
             setMistakesNumber(0);
+            setSliderValue(0);
             return;
         }
 

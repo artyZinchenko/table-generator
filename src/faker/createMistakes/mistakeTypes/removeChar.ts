@@ -2,7 +2,9 @@ import { Faker } from '@faker-js/faker';
 import { addChar } from './addChar';
 
 export const removeChar = (string: string, index: number, faker: Faker) => {
-    if (string.length < 2) return addChar(string, index, faker);
+    if (string.length < 4) {
+        return addChar(string, index, faker);
+    }
     return string
         .split('')
         .map((char, i) => {
