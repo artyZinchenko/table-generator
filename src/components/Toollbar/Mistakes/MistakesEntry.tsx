@@ -5,8 +5,6 @@ import Slider from '@mui/material/Slider';
 import MuiInput from '@mui/material/Input';
 import { useSettingsContext } from '../../../context/SettingsContext';
 import { SyntheticEvent, useState } from 'react';
-import { OutlinedInput } from '@mui/material';
-import { type } from 'os';
 
 const Input = styled(MuiInput)`
     width: 42px;
